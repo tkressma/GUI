@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Roboto Mono:400,700', 'Nunito Sans: 200,300,400,600,700,800,900']
+      }
+    });
+  </script>
+  <link href="https://www.findingfive.com/css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="https://www.findingfive.com/css/skeleton.css" rel="stylesheet" type="text/css">
+  <link href="https://www.findingfive.com/css/poppie.css" rel="stylesheet" type="text/css">
+  <link href="https://code.jquery.com/ui/1.12.0/themes/black-tie/jquery-ui.css" rel="stylesheet" type="text/css">
+  <link href="https://www.findingfive.com/css/icheck/square/orange.css" rel="stylesheet" type="text/css">
+  <link href="https://www.findingfive.com/css/experika-ui.css" rel="stylesheet" type="text/css">
+  <link href="https://www.findingfive.com/css/home.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <script src="https://use.fontawesome.com/9595edcb50.js"></script>
+  <script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}
+			if (n < 1) {slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++) {
+			  slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+			  dots[i].className = dots[i].className.replace(" active", "");
+			}
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		}
+  </script>
+  <style>
+
+	.sidenav {
+	  border-radius: 2px;
+	  width: 184px;
+	  position: fixed;
+	  z-index: 1;
+	  top: 100px;
+	  left: 24px;
+	  background: #ffffff;
+	  overflow-x: hidden;
+	  padding: 8px 0;
+	  border-right: 4px solid #2f4249;
+	  box-sizing: border-box;
+	}	
+	
+	.sidenav a {
+	  padding: 6px 8px 6px 16px;
+	  text-decoration: none;
+	  font-size: 25px;
+	  font-family: "nunito sans";
+	  color: #111111;
+	  display: block;
+	}
+
+	.sidenav a:hover {
+	  background-color: #2f4249;
+	  color: #ffffff;
+	}
+
+	.main {
+	  margin-left: 232px;
+	  margin-right: 232px;
+	  margin-top: 16px;
+	  font-size: 36px; /* Increased text to enable scrolling */
+	  padding: 0px 10px;
+	}
+
+	@media screen and (max-height: 450px) {
+	  .sidenav {padding-top: 15px;}
+	  .sidenav a {font-size: 18px;}
+	}
+	
+	/* carousel container */
+	.carousel-container {
+	  position: relative;
+	  background: #f1f1f1f1;
+	}
+
+	/* Slides */
+	.mySlides {
+	  display: none;
+	  padding: 80px;
+	  text-align: center;
+	}
+
+	/* Next & previous buttons */
+	.prev, .next {
+	  cursor: pointer;
+	  position: absolute;
+	  top: 50%;
+	  width: auto;
+	  margin-top: -30px;
+	  padding: 16px;
+	  color: #888;
+	  font-weight: bold;
+	  font-size: 20px;
+	  border-radius: 0 3px 3px 0;
+	  user-select: none;
+	}
+
+	/* Position the "next button" to the right */
+	.next {
+	  position: absolute;
+	  right: 0;
+	  border-radius: 3px 0 0 3px;
+	}
+
+	/* On hover, add a black background color with a little bit see-through */
+	.prev:hover, .next:hover {
+	  background-color: rgba(0,0,0,0.8);
+	  color: white;
+	}
+	
+	</style>
+	
+</head>
+
+<title>Study Store</title>
+
+<body>
+  <!-- Header -->
+  <header id="header" class="box-shadow-down">
+    <section id="logo" class="">
+      <a href="https://www.findingfive.com/home/"><img src="https://www.findingfive.com/images/logo-small-white.png"></a>
+    </section>
+    <section id="top-levels" class="">
+      <a class="top-level">
+        <form id="search-form" class="form-inline" role="form" method="post" action="//www.google.com/search" target="_blank">
+          <div class="input-group">
+            <input type="text" class="form-control search-form" placeholder="Search">
+          </div>
+        </form>
+      </a>
+      <div class="dropdown">
+        <a href="" class="top-level-link dropdown-trigger"><b>
+            <font size="3">20 Store Credits</font>
+          </b></a>
+        <a href="https://www.findingfive.com/logout/" class="top-level-link" title="Sign out"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+      </div>
+    </section>
+  </header>
+  <!-- -->
+  
+  
+  
+	<div class="sidenav">
+	  <h3><center><font color="#111111" face="nunito sans">  Categories </font></center></h3>
+	  <a href="#behavioral">Behavioral</a>
+	  <a href="#clinical">Clinical</a>
+	  <a href="#sensory">Sensory</a>
+	  <a href="#cognitive">Cognitive</a>
+	</div>
+
+<div class="main">
+  <h2>Top Rated Studies</h2>
+	<!-- carousel container -->
+	<div class="carousel-container">
+	  <!-- Full-width slides/quotes -->
+	  <div class="mySlides">
+	  </div>
+	  <div class="mySlides">
+	  </div>
+	  <!-- Next/prev buttons -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+
+  <h2>Recently Published</h2>
+  
+  <h2>Top Rated Studies</h2>
+
+<br>
+<p> Filler text for scrolling... </p>
+<p> Filler text for scrolling... </p>
+<p> Filler text for scrolling... </p>
+<p> Filler text for scrolling... </p>
+<p> Filler text for scrolling... </p>
+<p> Filler text for scrolling... </p>
+<p> Filler text for scrolling... </p>
+<p> Filler text for scrolling... </p>
+<p> Filler text for scrolling... </p>
+
+
+</div>  
+
+
+<footer id="footer" class="">
+<section class="">
+2019 © FindingFive. All rights reserved.
+</section>
+<section class="">
+<div class="section-header fwt-700">About</div>
+<ul>
+<li><a href="https://news.findingfive.com/our-mission-at-findingfive/" target="_blank">Mission</a></li>
+<li><a href="https://news.findingfive.com/directory/" target="_blank">People</a></li>
+<li><a href="https://news.findingfive.com/donoros-sponsors/" target="_blank">Donors</a></li>
+<li><a href="https://help.findingfive.com/tos.html">Terms of Service</a></li>
+<li><a href="https://help.findingfive.com/privacy.html">Privacy Policy</a></li>
+</ul>
+</section>
+<section class="">
+<div class="section-header fwt-700">Researcher Resources</div>
+<ul>
+<li><a target="_blank" href="https://news.findingfive.com/2019/03/26/crash-course-part-1-building-your-study/">Crash Course</a></li>
+<li><a href="https://news.findingfive.com/category/tutorial/" target="_blank">Tutorials</a></li>
+<li><a target="_blank" href="https://help.findingfive.com/api/">Grammar Reference</a></li>
+</ul>
+</section>
+<section class="">
+<div class="section-header fwt-700">Connect</div>
+<ul>
+<li><a href="https://www.facebook.com/findingfive/" target="_blank">Facebook</a></li>
+<li><a href="https://www.twitter.com/updateff/" target="_blank">Twitter</a></li>
+<li><a href="mailto:feedback@findingfive.com">Contact</a></li>
+</ul>
+</section>
+</footer>
+
+</body>
+</html>
